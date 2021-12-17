@@ -1,0 +1,10 @@
+---
+- name: installing pkg in nodes
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: install httpd pkg
+    yum:
+      name: httpd
+      state: present

@@ -1,0 +1,10 @@
+---
+- name: creating a dir in ansible
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: creating a dir
+    file: 
+     path: /home/pritam/devopsdir
+     state: directory

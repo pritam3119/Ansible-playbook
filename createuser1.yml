@@ -1,0 +1,8 @@
+---
+- name: create user oncemore
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: creating raj user
+    user: name=raj

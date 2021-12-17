@@ -1,0 +1,14 @@
+---
+- name: creating a copy file in nodes
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: copying a file
+    copy: 
+      src: /home/pritam/index.html
+      dest: /home/pritam
+      owner: pritam
+      group: pritam
+      mode: 0644
+

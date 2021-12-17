@@ -1,0 +1,10 @@
+---
+- name: this playbook is to create a file
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: creating file1
+    file: 
+     path: /home/pritam/demofile
+     state: touch

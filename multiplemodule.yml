@@ -1,0 +1,16 @@
+---
+- name: working on multiple module
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: installing httpd in nodes
+    yum:
+      name: httpd
+      state: present
+  
+  - name: starting httpd  
+    service:
+      name: httpd
+      state: started
+
